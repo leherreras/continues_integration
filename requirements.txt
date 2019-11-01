@@ -1,0 +1,4 @@
+SQLAlchemy
+Flask
+Flask-Classy
+Flask-Login
