@@ -1,9 +1,8 @@
 # continues_integration
-Proyecto aplicando continues integration para Politecnico Grancolombiano
+Proyecto aplicando continues integration para Politecnico Grancolombia
 
 **Link del projecto**: https://github.com/leherreras/continues_integration.git
-
- 
+Integracion Continua
 
 **Descripción del proyecto** 
 
