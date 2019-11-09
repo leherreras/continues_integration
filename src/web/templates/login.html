@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Diario</title>
+
+    <!-- Jquery-->
+    <script src="https://www.google.com.co/"></script>
+        
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css">
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+    <!-- Nuestro css-->
+    <link rel="stylesheet" type="text/css" href="../static/CSS/estilos.css" th:href="@{/css/estilo.css}">
+
+  </head>
+  <body>
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="../static/img/avatar.png"/>
+                </div> 
+                <form class="col-12">
+                    <div class="form-group" id="contrase-gro">
+                        <input type="text" class="form-control" placeholder="Nombre de usuario" name="usuario" id="user">
+                    </div>
+                    <div class="form-group">
+                            <input type="password" class="form-control" placeholder="Contraseña" name="password" id="pass">
+                    </div>
+                    <button type="submit" class="btn btn-prymary">Iniciar Sesión</button>
+                </form>
+                <div class="col-12 olvido">
+                    <a href="#">Recuperar contraseña</a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
