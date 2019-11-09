@@ -3,6 +3,8 @@ Proyecto aplicando continues integration para Politecnico Grancolombiano
 
 **Link del projecto**: https://github.com/leherreras/continues_integration.git
 
+Integracion continua
+
  
 
 **Descripción del proyecto** 
@@ -26,7 +28,7 @@ Debe clonar el projecto en su maquina con el siguiente comando:
 
 luego de que su proyecto este clonado debe ingresar a la carpeta de proyecto
 
-`cd continues_integration`
+`cd continues_integration/src`
 
 Cree y active su entorno virtual como se mostro en el link de instalacion del virtualenv
 
