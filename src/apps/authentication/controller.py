@@ -1,4 +1,4 @@
 
 
-def authenticate(email: str, passowrd: str):
-    pass  # Validate user in DB
+def authenticate(email: str, password: str):
+    pass  # TODO Validate user in DB

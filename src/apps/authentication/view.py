@@ -13,14 +13,16 @@ class LoginView(FlaskView):
     def post(self):
         email = request.form.get('email')
         password = request.form.get('password')
+        redirect_next = request.args.get('next', url_for('DiaryView:index'))
         if authenticate(email, password):
-            redirect_next = request.args.get('next', url_for('DiaryView:index'))
             flash('Bienvenido a su diario', 'info')
-            return redirect(redirect_next)
+        else:
+            flash('Error de autenticacion', 'error')
+        return redirect(redirect_next)
 
 
 class LogoutView(FlaskView):
-    decorators = [flask_login.current_user]
+    decorators = [flask_login.login_required]
 
     @route('/', method=['POST', 'GET'])
     def logout(self):
