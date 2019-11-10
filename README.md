@@ -3,10 +3,6 @@ Proyecto aplicando continues integration para Politecnico Grancolombiano
 
 **Link del projecto**: https://github.com/leherreras/continues_integration.git
 
-Integracion continua
-
- 
-
 **Descripción del proyecto** 
 
 El proyecto se va a realizar usando el lenguaje de programación Python, base de datos SQL, HTML5, JavaScript, CSS; se realizará el proceso de integración continua con la herramienta  Git, y la interfaz de GitHub, este lenguaje de programación se escogio por su versatilidad, fácil manejo de la interfaz gráfica.
