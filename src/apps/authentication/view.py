@@ -11,7 +11,7 @@ class LoginView(FlaskView):
         return render_template('login.html')
 
     def post(self):
-        email = request.form.get('email')
+        email = request.form.get('username')
         password = request.form.get('password')
         redirect_next = request.args.get('next', url_for('DiaryView:index'))
         if authenticate(email, password):
