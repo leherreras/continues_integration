@@ -6,7 +6,7 @@ from flask_paginate import get_page_parameter, Pagination
 from .controller import create_note, get_notes
 
 
-class LoginView(FlaskView):
+class DiaryView(FlaskView):
     decorators = [flask_login.login_required]
 
     def index(self):

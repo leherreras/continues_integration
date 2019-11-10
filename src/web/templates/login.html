@@ -27,9 +27,9 @@
         <div class="col-sm-8 main-section">
             <div class="modal-content">
                 <div class="col-12 user-img">
-                    <img src="../static/img/avatar.png"/>
+                    <img alt="avatar" src="../static/img/avatar.png"/>
                 </div>
-                <form class="col-12">
+                <form class="col-12" action="{{ url_for('LoginView:post') }}" method="post">
                     <div class="form-group" id="contrase-gro">
                         <input type="text" class="form-control" placeholder="Nombre de usuario" name="usuario" id="user">
                     </div>
