@@ -1,0 +1,10 @@
+instalar librerías
+pip install mysqlclient==1.3.4
+pip install mysql-python
+
+--- crear tablas
+1. por consola, desde la ruta del proyecto donde esta main, ingresar a python:   python
+2. estando en la consola de python, se crean las tablas definidas en el main.py:
+
+>>from Main import db
+>>db.create_all()
