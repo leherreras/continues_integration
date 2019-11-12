@@ -39,7 +39,7 @@ def get_all_users():
 
     return jsonify(results)
 
-@app.route("/src/entities/<string:name>", methods=["GET"])
+@app.route("/src/entities/<string:email>", methods=["GET"])
 def get_one_user_by_email(email):
     user = User.query.filter_by(email=email).first()
     user_schema = UserSchema()
