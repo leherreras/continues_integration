@@ -9,7 +9,7 @@ app = Flask(__name__, template_folder="web/templates", static_folder="web/static
 app.secret_key = 'secret_api'
 app.config['TEMPLATES_AUTO_RELOAD'] = True
 
-# Manage the login manager
+# Manage the login manager.
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = "LoginView:index"
