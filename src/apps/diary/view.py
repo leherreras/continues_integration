@@ -7,7 +7,7 @@ from .controller import create_note, get_notes
 
 
 class DiaryView(FlaskView):
-    decorators = [flask_login.login_required]
+    # decorators = [flask_login.login_required]
 
     def index(self):
         return render_template('diary.html')
