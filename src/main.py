@@ -1,4 +1,4 @@
-from flask import Flask, url_for, redirect
+from flask import Flask, url_for, render_template
 from flask_login import LoginManager
 
 from apps.authentication.view import LoginView
@@ -22,7 +22,7 @@ def load_user(user_id):
 
 @app.route('/')
 def home():
-    return redirect(url_for('DiaryView:index'))
+    return render_template('home.html')
 
 
 LoginView.register(app)
