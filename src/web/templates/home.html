@@ -2,31 +2,16 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>Inicio</title>
-    <!-- Jquery-->
-    <script src="https://www.google.com.co/"></script>
-
     <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
-
-    <link
-            rel="stylesheet"
-            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
 
     <!-- Los iconos tipo Solid de Fontawesome-->
-    <link
-            rel="stylesheet"
-            href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
-    />
-
-    <!-- Nuestro css
-    <link rel="stylesheet" type="text/css" href="../static/CSS/estilos.css" th:href="@{/css/estilo.css}">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"/>
 </head>
 <body>
 <div class="text-center">
-    <img src="/static/img/avatar.png" class="rounded" alt="..."><br>
+    <img src="/static/img/avatar.png" class="rounded" alt="avatar"><br>
     <button class="btn btn-prymary"><a href="{{ url_for('LoginView:index') }}">Iniciar</a></button>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
