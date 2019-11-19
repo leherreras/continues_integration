@@ -8,10 +8,10 @@ margin-top: 100px;
 padding: 0;
 }
 .modal-content{
-    background-color: rgb(32, 27, 27);
+    background-color: rgb(174, 73, 187);
     opacity:.86;
     padding: 0 20px;
-    box-shadow: 0px 0px 3px #848484;
+    box-shadow: 0px 0px 3px #f17ff1;
 
 }
 .user-img{
@@ -24,4 +24,7 @@ padding: 0;
     height: 100px;
     box-shadow: 0px 0px 3px #848484;
     border-radius: 95%;
+}
+.olv{
+    color: black;
 }
