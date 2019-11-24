@@ -20,6 +20,8 @@ class LoginView(FlaskView):
             flash('Error de autenticacion', 'error')
         return redirect(redirect_next)
 
+    def registro(self):
+        return 'hola mundo'
 
 class LogoutView(FlaskView):
     decorators = [flask_login.login_required]
