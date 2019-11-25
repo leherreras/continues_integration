@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Inicio</title>
+    <!-- FRAMEWORK BOOTSTRAP para el estilo de la pagina-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    />
+
+    <!-- Los iconos tipo Solid de Fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css"
+    />
+  </head>
+  <body>
+    <div class="text-center">
+      
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+  </body>
+  <div class="modal-dialog text-center">
+    <div class="col-sm-8 main-section">
+        <div class="modal-content">
+            <form class="col-12" action="{{ url_for('RegisterView:post') }}" method="post">
+                <br>
+                    <div class="form-group" id="nombre-gro">
+                            <input type="text" class="form-control" placeholder="Nombres" name="name" id="name">
+                        </div>
+                <div class="form-group" id="correo-gro">
+                    <input type="text" class="form-control" placeholder="Correo electrónico" name="usuario" id="user">
+                </div>
+                <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Contraseña" name="password" id="pass">
+                </div>
+                <button type="submit" class="btn btn-prymary">Registrar</button>
+            </form>
+            <div class="col-12" id="olvido">
+                <a href="#" id="olv">Iniciar sesión</a>
+            </div>
+        </div>
+    </div>
+</html>
