@@ -1,4 +1,4 @@
-node() {
+node(ci) {
     if (env.BRANCH_NAME == 'master') {
         PROJECT_NAME = env.JOB_NAME.replaceAll('\\/' + env.JOB_BASE_NAME, '').replaceAll("_", "-")
         try{
