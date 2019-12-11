@@ -18,8 +18,6 @@ node("CI") {
             }
 
             stage("Turning Docker services off"){
-                    sh "ls -la"
-                    sh "pwd"
                     echo "[STEP] Down docker services"
                     sh 'docker-compose down --rmi=local'
 
@@ -32,7 +30,7 @@ node("CI") {
 
             stage("Sanity check docker"){
                 echo "[STEP] Run script to review up the service"
-                sh "sh verify.sh"
+                bash "sh verify.sh"
             }
 
 
