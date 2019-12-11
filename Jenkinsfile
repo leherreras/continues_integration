@@ -9,7 +9,6 @@ node() {
 
             stage("Valid version"){
                 templateVersion=sh(script: 'git diff --name-only  HEAD^ HEAD | grep version', returnStdout:true)
-                sh "git diff --name-only  origin/master | grep version"
                 if(templateVersion) {
                     echo "[INFO] All is well"
                 }else {
