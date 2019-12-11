@@ -1,32 +1,28 @@
 node() {
     if (env.BRANCH_NAME == 'master') {
         PROJECT_NAME = env.JOB_NAME.replaceAll('\\/' + env.JOB_BASE_NAME, '').replaceAll("_", "-")
-
+        try{
             stage("Getting from Git") {
                 echo "[STEP] This is a test of clone git"
                 checkout scm
             }
 
-//            stage("Valid version"){
-//                templateVersion=sh(script: 'git diff --name-only  origin/master | grep version', returnStdout:true)
-//                sh "git diff --name-only  origin/master | grep version"
-//                if(templateVersion) {
-//                    echo "[INFO] All is well"
-//                }else {
-//                    echo "[ERROR] The version has not been modified"
-//                    throw new Exception("The version has not been modified")
-//                }
-//            }
+            stage("Valid version"){
+                templateVersion=sh(script: 'git diff --name-only  HEAD^ HEAD | grep version', returnStdout:true)
+                sh "git diff --name-only  origin/master | grep version"
+                if(templateVersion) {
+                    echo "[INFO] All is well"
+                }else {
+                    echo "[ERROR] The version has not been modified"
+                    throw new Exception("The version has not been modified")
+                }
+            }
 
             stage("Turning Docker services off"){
-                try{
+
                     echo "[STEP] Down docker services"
                     sh 'docker-compose down --rmi=local'
-                }catch(e)
-                {
-                    currentBuild.result = "FAILED"
-                    throw e
-                }
+
             }
 
             stage("Building Docker"){
@@ -54,6 +50,10 @@ node() {
                                          name: 'Done']]
                  }
             }
-
+         }catch(e)
+        {
+            currentBuild.result = "FAILED"
+            throw e
+        }
     }
 }
