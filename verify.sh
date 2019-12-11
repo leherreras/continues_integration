@@ -7,7 +7,7 @@ while true; do
         exit 1
     else
         curl -XGET -f http://localhost/login/
-        if [[ $? -eq 0 ]]; then
+        if [ $? -eq 0 ]; then
             echo "[INFO] The service is up"
             exit 0
         else

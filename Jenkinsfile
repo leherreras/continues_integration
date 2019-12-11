@@ -30,7 +30,7 @@ node("CI") {
 
             stage("Sanity check docker"){
                 echo "[STEP] Run script to review up the service"
-                bash "sh verify.sh"
+                sh "sh verify.sh"
             }
 
 
