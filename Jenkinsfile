@@ -18,6 +18,7 @@ node() {
             }
 
             stage("Turning Docker services off"){
+                    sh "ls -la"
                     sh "pwd"
                     echo "[STEP] Down docker services"
                     sh 'docker-compose down --rmi=local'
