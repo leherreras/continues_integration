@@ -3,7 +3,7 @@ services:
   web:
     container_name: ci-web
     build: .
-    ports:
+    expose:
       - 5000
   nginx:
     image: "nginx:1.17.2"
