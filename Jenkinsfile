@@ -8,16 +8,16 @@ node() {
                 checkout scm
             }
 
-            stage("Valid version"){
-                templateVersion=sh(script: 'git diff --name-only  origin/master | grep version', returnStdout:true)
-                sh "git diff --name-only  origin/master | grep version"
-                if(templateVersion) {
-                    echo "[INFO] All is well"
-                }else {
-                    echo "[ERROR] The version has not been modified"
-                    throw new Exception("The version has not been modified")
-                }
-            }
+//            stage("Valid version"){
+//                templateVersion=sh(script: 'git diff --name-only  origin/master | grep version', returnStdout:true)
+//                sh "git diff --name-only  origin/master | grep version"
+//                if(templateVersion) {
+//                    echo "[INFO] All is well"
+//                }else {
+//                    echo "[ERROR] The version has not been modified"
+//                    throw new Exception("The version has not been modified")
+//                }
+//            }
 
             stage("Turning Docker services off"){
                 echo "[STEP] Down docker services"
