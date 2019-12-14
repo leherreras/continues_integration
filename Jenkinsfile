@@ -2,7 +2,7 @@ node("CI") {
     if (env.BRANCH_NAME == 'master') {
         PROJECT_NAME = env.JOB_NAME.replaceAll('\\/' + env.JOB_BASE_NAME, '').replaceAll("_", "-")
         try{
-            stage("Getting from Git.") {
+            stage("Getting from Git") {
                 echo "[STEP] This is a test of clone git"
                 checkout scm
             }
