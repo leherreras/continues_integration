@@ -6,7 +6,7 @@ while true; do
         docker logs --tail 50 continues_integration-service
         exit 1
     else
-        curl -XGET -f http://localhost:5000/login/
+        curl -XGET -f http://localhost/login/
         if [ $? -eq 0 ]; then
             echo "[INFO] The service is up"
             exit 0

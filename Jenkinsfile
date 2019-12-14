@@ -39,7 +39,7 @@ node("CI") {
                 sh "python test/test_main.py"
             }
 
-            stage("QA Verification") {
+            stage("QA manual verification") {
 
                  timeout(time: 1, unit: 'DAYS'){
                      input message: 'Verification finished?',
