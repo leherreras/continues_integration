@@ -11,6 +11,6 @@ services:
     volumes:
       - ${PWD}/config/nginx:/etc/nginx
     ports:
-      - 5000:80
+      - 80:80
     depends_on:
       - web
