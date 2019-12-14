@@ -34,8 +34,9 @@ node("CI") {
             }
 
 
-            stage("Running functional test"){
-                echo "[INFO] Running functional test"
+            stage("Running unittest"){
+                echo "[INFO] Running unittest"
+                sh "python test/test_main.py"
             }
 
             stage("QA Verification") {
