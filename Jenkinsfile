@@ -3,7 +3,7 @@ node("CI") {
         PROJECT_NAME = env.JOB_NAME.replaceAll('\\/' + env.JOB_BASE_NAME, '').replaceAll("_", "-")
         try{
             stage("Getting from Git") {
-                echo "[STEP] This is a test of clone git"
+                echo "[STEP] This is a test of clone git."
                 checkout scm
             }
 
