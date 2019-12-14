@@ -52,6 +52,8 @@ node("CI") {
          }catch(e)
         {
             currentBuild.result = "FAILED"
+            echo "[STEP] Down docker services"
+            sh 'docker-compose down --rmi=local'
             throw e
         }
     }
