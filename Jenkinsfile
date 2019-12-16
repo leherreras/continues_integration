@@ -10,7 +10,7 @@ node("CI") {
             stage("Valid version"){
                 templateVersion=sh(script: 'git diff --name-only  HEAD^ HEAD | grep version', returnStdout:true)
                 if(templateVersion) {
-                    echo "[INFO] All is well"
+                    echo "[INFO] All is well."
                 }else {
                     echo "[ERROR] The version has not been modified"
                     throw new Exception("The version has not been modified")
