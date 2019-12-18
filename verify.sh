@@ -2,7 +2,7 @@
 while true; do
     if docker container ls -a -f status=exited -f name=continues_integration-service | grep continues_integration
     then
-        echo "[ERROR] The service is down"
+        echo "[ERROR] The service is down."
         docker logs --tail 50 continues_integration-service
         exit 1
     else
